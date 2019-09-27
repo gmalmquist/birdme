@@ -1,0 +1,21 @@
+<!DOCYTPE html>
+<html>
+<head>
+  <title>BirdMe</title>
+</head>
+<body>
+<div>
+  <p>Load your profile image either by pasting it on this page (CMD+V), or by loading it by URL.
+
+  <p>Then right-click + save image as on the pic below.
+</div>
+<br>
+<div style="display: flex;">
+  <input style="flex-grow: 5;" type="text" id="url" placeholder="profile pic url" value="">
+  <button style="flex-grow: 1;" id="load" onclick="javascript:load()">Load</button>
+</div>
+<br>
+<canvas id="birdme" width="512" height="512" />
+<script type="application/javascript" src="birdme.js"></script>
+</body>
+</html>
