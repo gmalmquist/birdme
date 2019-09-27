@@ -69,7 +69,10 @@ document.onpaste = function(event){
 
 document.addEventListener('mousedown',  event => {
   const e = event || window.event;
-  //e.preventDefault();
+
+  if (e.which !== 1) {
+    return true;
+  }
 
   drag.dragging = true;
   drag.startX = e.pageX;
@@ -98,6 +101,10 @@ document.addEventListener('mousemove', event => {
 document.addEventListener('mouseup', event => {
   const e = event || window.event;
   e.preventDefault();
+
+  if (!drag.dragging) {
+    return;
+  }
 
   drag.currentX = e.pageX;
   drag.currentY = e.pageY;
